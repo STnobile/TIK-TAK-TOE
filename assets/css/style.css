@@ -1,8 +1,6 @@
-body {
-   background-color: #000000;
+body{
+    background-color: #000;
 }
-
-
 td {
     border: 2px solid rgb(156, 91, 91);
     height: 100px;
@@ -62,4 +60,11 @@ button {
     color: #ffffff;
     border-radius: 20px;
     box-shadow: 3px solid rgba(201, 73, 201, 0.816);
+}
+.huplayer {
+    color: rgb(156, 91, 91);
+}
+
+.aiplayer {
+    color: rgba(201, 73, 201, 0.816);
 }
