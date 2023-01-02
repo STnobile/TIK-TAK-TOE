@@ -1,6 +1,30 @@
 body{
     background-color: #000;
 }
+
+.box-rules {
+     background-color: rgb(63, 47, 161);
+     width: 450px;
+     height: 200px;
+     line-height: 20px;
+     left: 100px;
+     top: 60px;
+     position: absolute;
+     border-radius: 20px;
+
+}
+
+
+.rules {
+    position: relative;
+    left: 2%;
+    top: 5%;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
 td {
     border: 2px solid rgb(156, 91, 91);
     height: 100px;
@@ -16,7 +40,7 @@ table {
     position: absolute;
     left: 50%;
     margin-left: -155px;
-    top: 50px;
+    top: 50%;
 }
 
 table tr:first-child td {
@@ -41,7 +65,7 @@ table tr td:last-child {
 .endgame {
     display: none;
     width: 200px;
-    top: 120px;
+    top: 380px;
     background-color:rgba(156, 91, 91, 0.607);
     position: absolute;
     left: 50%;
@@ -67,4 +91,27 @@ button {
 
 .aiplayer {
     color: rgba(201, 73, 201, 0.816);
+}
+
+@media screen and (min-width: 300px) and (max-width: 640px) {
+
+    .box-rules {
+    background-color: rgb(164, 66, 128);
+    left: 20px;
+    width: 200px;
+    }
+
+    .rules{
+        left: 2%;
+        top: 5%;
+        font-size: 9px;
+    }
+
+    table {
+        position: absolute;
+        top: 330px;
+        left: 50%;
+        margin-left: -120px;
+        width: 250px;
+    }
 }
