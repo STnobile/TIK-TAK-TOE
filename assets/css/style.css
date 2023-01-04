@@ -2,6 +2,18 @@ body{
     background-color: #000;
 }
 
+.title1 {
+    position: absolute;
+    left: 50%;
+}
+
+.logo {
+    color: rgb(255, 51, 255);
+    box-shadow: rgba(250, 0, 250, 0.702) 0px 54px 55px, rgba(250, 0, 250, 0.652) 0px -12px 30px, rgba(250, 0, 250, 0.652) 0px 4px 6px, rgba(250, 0, 250, 0.656) 0px 12px 13px, rgba(250, 0, 250, 0.652) 0px -3px 5px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
 .box-rules {
      background-color: rgb(63, 47, 161);
      width: 450px;
@@ -41,7 +53,10 @@ table {
     left: 50%;
     margin-left: -155px;
     top: 50%;
+    border-radius: 10px;
+    box-shadow: rgba(85, 104, 191, 0.56) 0px 20px 100px 70px;
 }
+
 
 table tr:first-child td {
 border-top: 0;
