@@ -20,7 +20,7 @@ body{
      height: 200px;
      line-height: 20px;
      left: 100px;
-     top: 60px;
+     top: 70px;
      position: absolute;
      border-radius: 20px;
 
@@ -113,6 +113,7 @@ button {
     .box-rules {
     background-color: rgb(164, 66, 128);
     left: 20px;
+    top: 70px;
     width: 200px;
     }
 
@@ -120,6 +121,29 @@ button {
         left: 2%;
         top: 5%;
         font-size: 9px;
+    }
+
+    table {
+        position: absolute;
+        top: 330px;
+        left: 50%;
+        margin-left: -120px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+    .box-rules {
+     background-color: rgba(62, 47, 161, 0.692);
+     left: 20px;
+     top: 75px;
+    }
+
+    .rules{
+        left: 2%;
+        top: 5%;
+        font-size: 16px;
     }
 
     table {
