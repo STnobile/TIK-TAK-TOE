@@ -10,7 +10,7 @@ const winCombos = [
 	[2, 5, 8],
 	[0, 4, 8],
 	[6, 4, 2]
-]
+];
 
 const cells = document.querySelectorAll('.cell');
 startGame();
@@ -27,7 +27,7 @@ function startGame() {
 
 function turnClick(square) {
 	if (typeof origBoard[square.target.id] == 'number') {
-		turn(square.target.id, huPlayer)
+		turn(square.target.id, huPlayer);
 		if (!checkWin(origBoard, huPlayer) && !checkTie()) turn(bestSpot(), aiPlayer);
 	}
 }
@@ -36,8 +36,8 @@ function turn(squareId, player) {
 	origBoard[squareId] = player;
 	document.getElementById(squareId).innerText = player;
     document.getElementById(squareId).classList.add("huplayer");
-	let gameWon = checkWin(origBoard, player)
-	if (gameWon) gameOver(gameWon)
+	let gameWon = checkWin(origBoard, player);
+	if (gameWon) gameOver(gameWon);
 }
 
 function checkWin(board, player) {
@@ -83,7 +83,7 @@ function checkTie() {
 			cells[i].style.backgroundColor = "rgb(255, 127, 80)";
 			cells[i].removeEventListener('click', turnClick, false);
 		}
-		declareWinner("Tie Game!")
+		declareWinner("Tie Game!");
 		return true;
 	}
 	return false;
