@@ -30,6 +30,30 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 
 
+# Testing 
+
+* My project is responsive in different browsers: Chrome, Safari and FireFox.
+* This project is responsive and looks good and is working in all the standard screen sizes. I tested it using devtools device toolbar.
+* I confirmed that the Header, Game  are readable and easy to understand.
+* The site is working fine with all the resolutions such as: 
+ 1920×1080 (9.94%)
+ 1366×768 (6.22%)
+ 360×640 (5.88%)
+ 414×896 (4.21%)
+ 1536×864 (3.94%)
+ 375×667 (3.74%)
+
+
+ # Validator Testing
+## HTML
+![device reponsive](/assets/images/validator.html.png)
+
+## CSS
+![device reponsive](/assets/images/css.vali.png)
+ ## Lighthouse score
+![device reponsive](/assets/imagess/Screenshot%202023-01-04%20at%2018.04.53%20Medium.png)
+
+
  # Credit
  * I took ispiration from the CI Love Math Project.
  * I watched plenty of video on youtube for get some inspiration like video of javascritps project,

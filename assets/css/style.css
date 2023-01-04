@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #000;
 }
 
@@ -94,11 +94,9 @@ table tr td:last-child {
 }
 
 button {
-    border: 2px solid rgba(201, 73, 201, 0.816);
     background-color: rgba(201, 73, 201, 0.816);
     color: #ffffff;
     border-radius: 20px;
-    box-shadow: 3px solid rgba(201, 73, 201, 0.816);
 }
 .huplayer {
     color: rgb(156, 91, 91);
