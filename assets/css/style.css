@@ -114,13 +114,13 @@ button {
     background-color: rgb(164, 66, 128);
     left: 20px;
     top: 70px;
-    width: 200px;
+    width: 280px;
     }
 
     .rules{
         left: 2%;
         top: 5%;
-        font-size: 9px;
+        font-size: 12px;
     }
 
     table {
