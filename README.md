@@ -3,7 +3,7 @@ This is a easy game of tic tac toe made with HTM, CSS, JS.
 
 Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also logic. Love Maths is a fully responsive JavaScript logic game that will allow users to compite agaist the computer.
 
-![devises reponsive](/assets/imagess/Screenshot%202023-01-04%20at%2016.38.13%20Large.png)
+![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.38.13%20Large.png)
 # Features 
 
 * The Tic Tac Toe Logo and heading
@@ -12,7 +12,7 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
   * Featured at left of the page, the rules of the game. It easy to read and understand. As most of us we are familiar whit this game.
 
 
-![devises reponsive](/assets/imagess/Screenshot%202023-01-04%20at%2016.45.34%20Medium.png)
+![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.45.34%20Medium.png)
   
 
 
@@ -20,7 +20,7 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
     - This section will allow the user to play the tic tac toe. The user will be able to easily see the game table. 
     - The user will be able to compite against the computer and using the O's meanwhile the computer will be using the Xs.
 
-![devises reponsive](/assets/imagess/Screenshot%202023-01-04%20at%2016.47.13%20Medium.png)
+![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.47.13%20Medium.png)
     
 
 # Game explation and AI integration 
@@ -51,11 +51,54 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 ## CSS
 ![device reponsive](/assets/images/css.vali.png)
  ## Lighthouse score
-![device reponsive](/assets/imagess/Screenshot%202023-01-04%20at%2018.04.53%20Medium.png)
+![device reponsive](/assets/images/Screenshot%202023-01-04%20at%2018.04.53%20Medium.png)
 
 
  # Credit
  * I took ispiration from the CI Love Math Project.
  * I watched plenty of video on youtube for get some inspiration like video of javascritps project,
   that helped me to create the tic tac toe game.
-    
+
+
+    # Deployment 
+  * The website was deployed to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub repository, navigate to the setting tab
+    - From the soursr section menu, select Pages
+    - Select the live link that I provided below 
+
+    ### https://stnobile.github.io/TIK-TAK-TOE/
+  # Cloning a repository
+
+        * Link below
+       ###  https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+
+   * On GitHub.com, navigate to the main page of the repository.
+
+   * Above the list of files, click  Code.
+    "Code" button
+
+   * Copy the URL for the repository.
+
+   * To clone the repository using HTTPS, under 
+    "HTTPS", click.
+   To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click.
+
+   To clone a repository using GitHub CLI, click GitHub CLI, then click .
+   The clipboard icon for copying the URL to clone a repository with GitHub CLI
+   Open Terminal.
+
+Change the current working directory to the location where you want the cloned directory.
+
+Type git clone, and then paste the URL you copied earlier.
+
+ * git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+Press Enter to create your local clone.
+
+* git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
