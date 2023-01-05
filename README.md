@@ -102,3 +102,12 @@ Press Enter to create your local clone.
 > remote: Compressing objects: 100% (8/8), done.
 > remove: Total 10 (delta 1), reused 10 (delta 1)
 > Unpacking objects: 100% (10/10), done.
+
+
+## Features to implement 
+
+* Add a section that allow the user to choose to play with O oe X's.
+
+* Add a section that show the score of the user and the AI.
+
+* Add a light/dark mode.
