@@ -81,7 +81,7 @@ table tr td:last-child {
     display: none;
     width: 200px;
     top: 380px;
-    background-color:rgba(156, 91, 91, 0.607);
+    background-color:  rgba(156, 91, 91, 0.781);
     position: absolute;
     left: 50%;
     margin-left: -100px;
@@ -94,7 +94,7 @@ table tr td:last-child {
 }
 
 button {
-    background-color: rgba(201, 73, 201, 0.816);
+    background-color: rgba(215, 8, 215, 0.816);
     color: #ffffff;
     border-radius: 20px;
 }
