@@ -27,6 +27,7 @@ function startGame() {
 	for (let i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
 		cells[i].style.removeProperty('background-color');
+		cells[i].classList.remove("hu");
 		cells[i].addEventListener('click', turnClick, false);
 	}
 }
@@ -37,16 +38,15 @@ function startGame() {
  * 
  * @param {*} square 
  */
-	function turnClick(square) {
-		if (typeof origBoard[square.target.id] == 'number') {
-			turn(square.target.id, huPlayerSymbol) && !checkTie();
-			{
-				setTimeout(() => {
-				turn(bestSpot(), aiPlayerSymbol);
-			}, 850);
+function turnClick(square) {
+	if (typeof origBoard[square.target.id] == 'number') {
+		const gameOver = turn(square.target.id, huPlayerSymbol);
+		if (gameOver) return;
+		setTimeout(() => {
+			turn(bestSpot(), aiPlayerSymbol);
+		}, 850);
 	}
-	}	
-	}
+}
 
 /**
  * the turn is divided into two parameters 
@@ -59,10 +59,14 @@ function turn(squareId, playerSymbol) {
 	origBoard[squareId] = playerSymbol;
 	document.getElementById(squareId).innerText = playerSymbol;
 	document.getElementById(squareId).classList.add("huplayer");
-	let gameWon = checkWin(origBoard, playerSymbol);
-	if (gameWon) {
-		gameOver(gameWon);
-     }
+
+	const gameTied = checkTie();
+	const playerWon = checkWin(origBoard, playerSymbol);
+	if (playerWon) {
+		gameOver(playerWon);
+	}
+
+	return !!(gameTied || playerWon);
 }
 
 /**
@@ -84,7 +88,7 @@ function checkWin(board, player) {
 	 */
 	for (let [index, win] of winCombos.entries()) {
 		if (win.every(elem => plays.indexOf(elem) > -1)) {
-			gameWon = {index: index, player: player};
+			gameWon = { index: index, player: player };
 			break;
 		}
 	}
@@ -100,7 +104,7 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
-		gameWon.player == huPlayerSymbol ? "pink" : "rgba(95, 104, 191, 0.56";
+			gameWon.player == huPlayerSymbol ? "pink" : "rgba(95, 104, 191, 0.56";
 	}
 	/**
 	 * here we define that the user can not click 
@@ -137,7 +141,7 @@ function bestSpot() {
 function checkTie() {
 	if (emptySquares().length == 0) {
 		for (let i = 0; i < cells.length; i++) {
-			cells[i].div.classList.add("huPlayer");
+			cells[i].classList.add("hu");
 			cells[i].removeEventListener('click', turnClick, false);
 		}
 		declareWinner("Tie Game!");
@@ -151,7 +155,8 @@ function checkTie() {
  * A minimax algorithm is a recursive program written to find the 
  * best gameplay that minimizes any tendency to lose a game 
  * while maximizing any opportunity to win the game
- * Tic Tac Toe: Understanding the Minimax Algorithm. Reference 
+ * Tic Tac Toe: Understanding the Minimax Algorithm. 
+ * https://github.com/beaucarnes/fcc-pro...
  * @param {*} newBoard 
  * @param {*} playerSymbol 
  * @returns 
@@ -160,11 +165,11 @@ function minimax(newBoard, playerSymbol) {
 	let availSpots = emptySquares();
 
 	if (checkWin(newBoard, huPlayerSymbol)) {
-		return {score: -10};
+		return { score: -10 };
 	} else if (checkWin(newBoard, aiPlayerSymbol)) {
-		return {score: 10};
+		return { score: 10 };
 	} else if (availSpots.length === 0) {
-		return {score: 0};
+		return { score: 0 };
 	}
 	let moves = [];
 	for (let i = 0; i < availSpots.length; i++) {
@@ -186,9 +191,9 @@ function minimax(newBoard, playerSymbol) {
 	}
 
 	let bestMove;
-	if(playerSymbol === aiPlayerSymbol) {
+	if (playerSymbol === aiPlayerSymbol) {
 		let bestScore = -10000;
-		for(let i = 0; i < moves.length; i++) {
+		for (let i = 0; i < moves.length; i++) {
 			if (moves[i].score > bestScore) {
 				bestScore = moves[i].score;
 				bestMove = i;
@@ -196,7 +201,7 @@ function minimax(newBoard, playerSymbol) {
 		}
 	} else {
 		let bestScore = 10000;
-		for(let i = 0; i < moves.length; i++) {
+		for (let i = 0; i < moves.length; i++) {
 			if (moves[i].score < bestScore) {
 				bestScore = moves[i].score;
 				bestMove = i;

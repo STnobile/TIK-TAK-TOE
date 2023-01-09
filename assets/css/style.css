@@ -109,6 +109,9 @@ button {
 .huplayer {
     color: rgb(248, 133, 133);
 }
+.hu {
+    background-color: coral;
+}
 
 @media screen and (min-width: 300px) and (max-width: 640px) {
 

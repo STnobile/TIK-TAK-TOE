@@ -22,6 +22,13 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 ![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.47.13%20Medium.png)
     
+  ## Features to implement 
+
+* Add a section that allow the user to choose to play with O oe X's.
+
+* Add a section that show the score of the user and the AI.
+
+* Add a light/dark mode.
 
 # Game explation and AI integration 
 * The game is really simple, consist to have tre 0's in a row orizontal, vertical or diagonal to win.
@@ -43,6 +50,16 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
  1536×864 (3.94%)
  375×667 (3.74%)
 
+* The game is working fine, once you will manage to beat the AI the cell will color in darkblue and a message will appear with the opposition to repaly the game. 
+![devises reponsive](/assets/images/testingwon.png)
+
+* In case of tie game, the all background will color itself with a coral background.
+
+![devises reponsive](/assets/images/tiegame.png)
+
+* In casa of User winning the game the after making tre O in a row the background will color of pink.
+
+![devises reponsive](/assets/images/testinglose.png)
 
  # Validator Testing
 ## HTML
@@ -50,17 +67,19 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 ## CSS
 ![device reponsive](/assets/images/css.vali.png)
+
+
+## JS
+![device reponsive](/assets/images/JSvalidator.png)
+
  ## Lighthouse score
-![device reponsive](/assets/images/Screenshot%202023-01-04%20at%2018.04.53%20Medium.png)
+![device reponsive](/assets/images/LightHouse.png)
 
 
- # Credit
- * I took ispiration from the CI Love Math Project.
- * I watched plenty of video on youtube for get some inspiration like video of javascritps project,
-  that helped me to create the tic tac toe game.
 
 
-    # Deployment 
+
+  # Deployment 
   * The website was deployed to GitHub pages. The steps to deploy are as follows:
     - In the GitHub repository, navigate to the setting tab
     - From the soursr section menu, select Pages
@@ -104,10 +123,25 @@ Press Enter to create your local clone.
 > Unpacking objects: 100% (10/10), done.
 
 
-## Features to implement 
 
-* Add a section that allow the user to choose to play with O oe X's.
 
-* Add a section that show the score of the user and the AI.
+ # Credit
+ * I took ispiration from the CI Love Math Project.
+ * I watched plenty of video on youtube for get some inspiration like video of javascritps project,
+  that helped me to create the tic tac toe game.
 
-* Add a light/dark mode.
+ # Implement Minimax algorithm 
+   A minimax algorithm is a recursive program written to find the 
+   best gameplay that minimizes any tendency to lose a game 
+   while maximizing any opportunity to win the game
+
+ * Tic Tac Toe: Understanding the Minimax Algorithm.
+ * look at the link below
+  https://alialaa.com/blog/tic-tac-toe-js-minimax
+  ![device reponsive](/assets/images/minimaxalg.png)
+  
+  Few of the YouTube channel that i watched to get inspired :
+  https://www.youtube.com/watch?v=oZrp3Atkz18
+  https://www.youtube.com/watch?v=AzvpHNkjqsg
+  https://www.youtube.com/watch?v=P2TcQ3h0ipQ
+  https://www.youtube.com/watch?v=Y-GkMjUZsmM
