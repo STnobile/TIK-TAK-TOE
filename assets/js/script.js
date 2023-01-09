@@ -15,6 +15,12 @@ const winCombos = [
 const cells = document.querySelectorAll('.cell');
 startGame();
 
+/**
+ * this function give an empty game table where the
+ * user(huPlayerSymbol) must to make the first move 
+ * so the game can start.
+ * the startGame is also the replay bottom to restart the game.
+ */
 function startGame() {
 	document.querySelector(".endgame").style.display = "none";
 	origBoard = Array.from(Array(9).keys());
@@ -25,16 +31,30 @@ function startGame() {
 	}
 }
 
-
-function turnClick(square) {
-	if (typeof origBoard[square.target.id] == 'number') {
-		turn(square.target.id, huPlayerSymbol);{
-			setTimeout(() => {
-			turn(bestSpot(), aiPlayerSymbol);}, 850);
+/**
+ * The turnClick is the function that define the square 
+ * with the O or X's 
+ * 
+ * @param {*} square 
+ */
+	function turnClick(square) {
+		if (typeof origBoard[square.target.id] == 'number') {
+			turn(square.target.id, huPlayerSymbol) && !checkTie();
+			{
+				setTimeout(() => {
+				turn(bestSpot(), aiPlayerSymbol);
+			}, 850);
 	}
-}
-}
+	}	
+	}
 
+/**
+ * the turn is divided into two parameters 
+ * one for the huPlayerSymbol and the aiPlayerSymbol
+ * and decide what player has won
+ * @param {} squareId 
+ * @param {*} playerSymbol 
+ */
 function turn(squareId, playerSymbol) {
 	origBoard[squareId] = playerSymbol;
 	document.getElementById(squareId).innerText = playerSymbol;
@@ -45,10 +65,23 @@ function turn(squareId, playerSymbol) {
      }
 }
 
+/**
+ * we are using a reduce definde all the move that has been played throughout the game
+ * a = accumulater is the value that is the end result of the board
+ * e = the element the board and the i is the index
+ * @param {*} board I used this because during the game the value can change
+ * and the board might change.
+ * @param {*} player is the values that can be used during the game.
+ * @returns 
+ */
 function checkWin(board, player) {
 	let plays = board.reduce((a, e, i) =>
 		(e === player) ? a.concat(i) : a, []);
 	let gameWon = null;
+
+	/**
+	 * here the let function define the winner
+	 */
 	for (let [index, win] of winCombos.entries()) {
 		if (win.every(elem => plays.indexOf(elem) > -1)) {
 			gameWon = {index: index, player: player};
@@ -58,11 +91,21 @@ function checkWin(board, player) {
 	return gameWon;
 }
 
+/**
+ * This function check if the game is won or lost 
+ * choosing 2 different background one is for the win of the user 
+ * the other is for thw win of the ia 
+ * @param {boolean} gameWon 
+ */
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
-		gameWon.player == huPlayerSymbol ? "userWon" : "rgba(95, 104, 191, 0.56";
+		gameWon.player == huPlayerSymbol ? "pink" : "rgba(95, 104, 191, 0.56";
 	}
+	/**
+	 * here we define that the user can not click 
+	 * on the square once the game is finish.
+	 */
 	for (let i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
@@ -78,14 +121,23 @@ function emptySquares() {
 	return origBoard.filter(s => typeof s == 'number');
 }
 
+/**
+ * The bestSpot function define the empty square
+ * where the aiPlayerSymbol insert the Xs
+ * @returns 
+ */
 function bestSpot() {
 	return minimax(origBoard, aiPlayerSymbol).index;
 }
 
+/**
+ * This function check if the end result is a tie.
+ * @returns {boolean} Whether game is a tie
+ */
 function checkTie() {
 	if (emptySquares().length == 0) {
 		for (let i = 0; i < cells.length; i++) {
-			cells[i].style.backgroundColor = "rgb(255, 127, 80)";
+			cells[i].div.classList.add("huPlayer");
 			cells[i].removeEventListener('click', turnClick, false);
 		}
 		declareWinner("Tie Game!");
@@ -94,6 +146,16 @@ function checkTie() {
 	return false;
 }
 
+
+/**
+ * A minimax algorithm is a recursive program written to find the 
+ * best gameplay that minimizes any tendency to lose a game 
+ * while maximizing any opportunity to win the game
+ * Tic Tac Toe: Understanding the Minimax Algorithm. Reference 
+ * @param {*} newBoard 
+ * @param {*} playerSymbol 
+ * @returns 
+ */
 function minimax(newBoard, playerSymbol) {
 	let availSpots = emptySquares();
 
