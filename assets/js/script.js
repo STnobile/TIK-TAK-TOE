@@ -273,7 +273,7 @@ function minimax(newBoard, playerSymbol) {
 	return moves[bestMove];
 }
 
-/*
+
 document.addEventListener("DOMContentLoaded", () => {
 	const nextBtn = document.getElementById("nextBtn")
 	const replayBtn = document.getElementById("replayBtn")
@@ -286,4 +286,3 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 	startGame();
 });
-*/
