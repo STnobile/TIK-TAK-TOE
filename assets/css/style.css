@@ -122,12 +122,12 @@ button {
 
 
     .box-rules {
-    background-color: rgb(164, 66, 128);
-    position: absolute;
-    left: 50%;
-    margin-left: -155px;
-    top: 15%;
-    width: 280px;
+        background-color: rgb(164, 66, 128);
+        position: absolute;
+        left: 55%;
+        margin-left: -155px;
+        top: 8%;
+        width: 270px;
     }
 
     .rules{
@@ -137,16 +137,18 @@ button {
     }
 
     table {
-        position: absolute;
+        width: 250px;
+        left: 60%;
+        top: 55%;
     }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
 
     .box-rules {
-     background-color: rgba(62, 47, 161, 0.692);
-     left: 20px;
-     top: 95px;
+        background-color: rgba(62, 47, 161, 0.692);
+        left: 20px;
+        top: 95px;
     }
 
     .rules{
@@ -160,6 +162,62 @@ button {
     }
 
     .endgame {
-        top: 650px;
+        top: 450px;
+    }
+}
+
+
+.score {
+    background-color: rgb(172, 198, 69);
+    width: 250px;
+    position: relative;
+    left: 60%;
+    top: 220px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.gameCount {
+    color:rgb(63, 47, 161);
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -30px;
+}
+
+
+
+.keepScore{
+      display: flex;
+      justify-content: space-around;
+      border-radius: 25px;
+}
+
+.containScore {
+    color: #000;
+    background-color: rgb(240, 248, 255);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 640px){
+    .score {
+        position: absolute;
+        left: 12%;
+        top: 38%;
+        height: 14vh;
+     }
+
+    .gameCount {
+        top: -40px;
+     }
+
+    .containScore{
+        top: -55px;
     }
 }

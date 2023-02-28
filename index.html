@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A tik tac toe game as par t of CI projects.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/tieGame.png">
 
     <title>TIK-TAK_TOE</title>
 
@@ -29,7 +29,20 @@
 </div>
 </section>
 
+<section class="score">
+    <h2>Score</h2>
+  <div class="gameCount">
+    <p>You</p>
+    <p>Tie</p> 
+    <p>AI</p>
+  </div>
 
+  <div class="keepScore">
+  <div class="containScore" id="userScore"></div>
+  <div class="containScore" id="tieScore"></div>
+  <div class="containScore" id="computerScore"></div>
+  </div>
+</section>
 <table>
     <tr>
         <td class="cell" data-index="0" id="0"></td>
@@ -49,7 +62,9 @@
 </table>
  <div class="endgame">
   <div class="text"></div>
- <button onclick="startGame()">Replay</button>
+  <div class="final-result" style="display: none;"></div>
+  <button id="nextBtn">Next</button>
+  <button id="replayBtn">Replay</button>
 </div>
 
 

@@ -1,9 +1,11 @@
 # TIC-TAC-TOE
+
+![devises reponsive](/assets/images/favicon.png)
+
 This is an easy game of tic tac toe made with HTML, CSS, JS.
 
-Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also logic. Tic Tac Toe is a fully responsive JavaScript logic game that will allow users to compite agaist the computer.
+Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also logic. Tic Tac Toe is a fully responsive JavaScript logic game that will allow users to compete against ist the computer.
 
-![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.38.13%20Large.png)
 # Features 
 
 * The Tic Tac Toe Logo and heading
@@ -12,7 +14,7 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
   * You find the rules of the game at the left of the page. It is easy to read and understand. As most of us is familiar with this game.
 
 
-![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.45.34%20Medium.png)
+![devises reponsive](/assets/images/frontpage.png)
   
 
 
@@ -21,7 +23,7 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
   * This section will allow the user to play the Tic Tac Toe. The user will be able to easily see the game table. 
   * The user will be able to compete against the computer using the Os meanwhile the computer will be using the Xs.
 
-![devises reponsive](/assets/images/Screenshot%202023-01-04%20at%2016.47.13%20Medium.png)
+![devises reponsive](/assets/images/gametable.png)
     
   ## Features to implement 
 
@@ -40,6 +42,8 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 # Testing 
 
+![devises reponsive](/assets/images/amiresponsive.png)
+
 * My project is responsive in different browsers: Chrome, Safari and FireFox.
 * This project is responsive and looks good and is working in all the standard screen sizes. I tested it using devtools device toolbar.
 * I confirmed that the Header, Game  are readable and easy to understand.
@@ -53,15 +57,41 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
  375×667 (3.74%)
 
 * The game is working fine, once you will manage to beat the AI the cell will color in darkblue and a message will appear with the opposition to replay the game. 
-![devises reponsive](/assets/images/testingwon.png)
+
+![devises reponsive](/assets/images/computerwon.png)
 
 * In case of tie game, the background will color itself with a coral background.
 
-![devises reponsive](/assets/images/tiegame.png)
+![devises reponsive](/assets/images/tieGame.png)
 
 * In case of user winning the game, after making three O in a row, the background will color pink.
 
-![devises reponsive](/assets/images/testinglose.png)
+* At the end of each game it will appear a screen with the result of game. Then the player will have two chooses:
+
+Next and Replay.
+Those are bottoms with different functions, let start with the first next.
+It has the function to keep the score of the games throughout the limit of 5 games played.
+
+The second bottom called Replay, has the function to reset the score to zero and restart the game.
+
+![devises reponsive](/assets/images/bnt_next_replay.png)
+
+* In case of the user of playing over the amount of game will pop a message on the top of the page, asking to restart the game.
+
+![devises reponsive](/assets/images/scoretable.png)
+
+
+* We have a score table that is useful to keep the point on sight. 
+  
+  - You is the user player.
+  - Tie is to check how many time the game has been even.
+  - Ai is the computer that you compete.
+
+![devises reponsive](/assets/images/score_point.png)
+
+
+
+
 
  # Validator Testing
 ## HTML
@@ -72,19 +102,15 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 
 ## JS
-![device reponsive](/assets/images/JSvalidator.png)
+![device reponsive](/assets/images/jsvalidator.png)
 
  ## Lighthouse score
-![device reponsive](/assets/images/LightHouse.png)
-
-
-
-
+![device reponsive](/assets/images/lighthouse.png)
 
   # Deployment 
   * The website was deployed to GitHub pages. The steps to deploy are as follows:
     - In the GitHub repository, navigate to the setting tab
-    - From the soursr section menu, select Pages
+    - From the sours section menu, select Pages
     - Select the live link that I provided below 
 
     ### https://stnobile.github.io/TIK-TAK-TOE/
@@ -125,13 +151,13 @@ Press Enter to create your local clone.
 > Unpacking objects: 100% (10/10), done.
 
  # Credit
- * I took ispiration from the CI Love Math Project.
- * I watched plenty of videos on youtube to get some inspiration of javascritps project,
+ * I took inspiration from the CI Love Math Project.
+ * I watched plenty of videos on youtube to get some inspiration of javascript's project,
   that helped me to create the Tic Tac oe game.
 
  ## Implement Minimax algorithm 
    A minimax algorithm is a recursive program written to find the 
-   best gameplay that minimizes any tendency to lose a game 
+   best game play that minimizes any tendency to lose a game 
    while maximizing any opportunity to win the game
 
  * Tic Tac Toe: Understanding the Minimax Algorithm.
