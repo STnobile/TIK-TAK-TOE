@@ -92,7 +92,7 @@ function turnClick(square) {
 // @param {*} playerSymbol 
 
 
- /* function turn(squareId, playerSymbol) {
+function turn(squareId, playerSymbol) {
     origBoard[squareId] = playerSymbol;
 	document.getElementById(squareId).innerText = playerSymbol;
 	document.getElementById(squareId).classList.add("huplayer");
@@ -113,7 +113,6 @@ function turnClick(square) {
 	}
 	return !!(gameTied || playerWon);
 }
-*/
 
  //
  // we are using a reduce defined all the move that has been played throughout the game
