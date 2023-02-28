@@ -92,6 +92,12 @@ The second bottom called Replay, has the function to reset the score to zero and
 
 
 
+# DEBUGGING 
+ * Had some issue to insert the favicon images, after few research I realized that of some typos errors, so it was Impossible to get the file.
+
+ * Met some issue on the logic of the keeping the score on display, also I was not able to connect the result to the inner text.
+ I actually managed to fix this issue creating different variables for user, computer and game tie and after that I create a document get element and connected to the inner text on my html file.  
+
 
  # Validator Testing
 ## HTML

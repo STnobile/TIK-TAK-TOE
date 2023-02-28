@@ -95,7 +95,7 @@ function turnClick(square) {
 function turn(squareId, playerSymbol) {
     origBoard[squareId] = playerSymbol;
 	document.getElementById(squareId).innerText = playerSymbol;
-	document.getElementById(squareId).classList.add("huplayer");
+	document.getElementById(squareId).classList.add("hu_player");
 
 	const gameTied = checkTie();
 	const playerWon = checkWin(origBoard, playerSymbol);
