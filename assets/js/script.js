@@ -33,7 +33,7 @@ const resetGame = () => {
 	tieScore = 0;
 	gamesCount = 0;
 	document.querySelector(".final-result").display = "none";
-}
+};
 
 //
 // this function give an empty game table where the
@@ -101,8 +101,8 @@ function turn(squareId, playerSymbol) {
 	const playerWon = checkWin(origBoard, playerSymbol);
 
 	if (playerWon == huPlayerSymbol) {
-     playerScore = playerScore + 1;
-	 gameOver(playerWon)
+     userScore = userScore + 1;
+	 gameOver(playerWon);
     }
 	if (playerWon) {
 		computerScore = computerScore + 1;
@@ -169,9 +169,9 @@ function declareWinner(who) {
 		const computerWon = computerScore > userScore;
 		let gameResult = "It's a tie";
 		if (playerWon) {
-			gameResult = "You won!"
+			gameResult = "You won!";
 		} else if (computerWon) {
-			gameResult = "AI won!"
+			gameResult = "AI won!";
 		}
 
 		const finalResultElement = document.querySelector(".final-result");
@@ -275,14 +275,14 @@ function minimax(newBoard, playerSymbol) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-	const nextBtn = document.getElementById("nextBtn")
-	const replayBtn = document.getElementById("replayBtn")
+	const nextBtn = document.getElementById("nextBtn");
+	const replayBtn = document.getElementById("replayBtn");
 
 	nextBtn.addEventListener("click", startGame);
 	replayBtn.addEventListener("click", () => {
 	  	resetGame();
 		startGame();
-	})
+	});
 	
 	startGame();
 });

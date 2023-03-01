@@ -25,13 +25,31 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 ![devises reponsive](/assets/images/gametable.png)
     
-  ## Features to implement 
+# Features to implement 
 
 * Add a section that allow the user to choose to play with O or X.
 
-* Add a section that shows the score of the user and the AI.
-
 * Add a light/dark mode.
+
+ 
+* At the end of each game it will appear a screen with the result of game. Then the player will have two chooses:
+
+## Next and Replay buttons.
+
+Those are bottoms with different functions, let start with the first next.
+It has the function to keep the score of the games throughout the limit of 5 games played.
+
+![devises reponsive](/assets/images/bnt_next_replay.png)
+
+The second bottom called Replay, has the function to reset the score to zero and restart the game.
+
+
+---
+In case of the user of playing over the amount of game will pop a message on the top of the page, asking to restart the game.
+
+
+![devises reponsive](/assets/images/scoretable.png)
+
 
 # Game explanation and AI integration 
 * The game is really simple, consists to have three Os in a row horizontal, vertical or diagonal to win.
@@ -66,16 +84,6 @@ Tic Tac Toe  is a site that hopes to demonstrate how pure JavaScript works in a 
 
 * In case of user winning the game, after making three O in a row, the background will color pink.
 
-* At the end of each game it will appear a screen with the result of game. Then the player will have two chooses:
-
-Next and Replay.
-Those are bottoms with different functions, let start with the first next.
-It has the function to keep the score of the games throughout the limit of 5 games played.
-
-The second bottom called Replay, has the function to reset the score to zero and restart the game.
-
-![devises reponsive](/assets/images/bnt_next_replay.png)
-
 * In case of the user of playing over the amount of game will pop a message on the top of the page, asking to restart the game.
 
 ![devises reponsive](/assets/images/scoretable.png)
@@ -83,16 +91,14 @@ The second bottom called Replay, has the function to reset the score to zero and
 
 * We have a score table that is useful to keep the point on sight. 
   
-  - You is the user player.
+  - You is the user player's score.
   - Tie is to check how many time the game has been even.
   - Ai is the computer that you compete.
 
 ![devises reponsive](/assets/images/score_point.png)
 
 
-
-
-# DEBUGGING 
+# Debugging 
  * Had some issue to insert the favicon images, after few research I realized that of some typos errors, so it was Impossible to get the file.
 
  * Met some issue on the logic of the keeping the score on display, also I was not able to connect the result to the inner text.
@@ -103,12 +109,13 @@ The second bottom called Replay, has the function to reset the score to zero and
 ## HTML
 ![device reponsive](/assets/images/validator.html.png)
 
+---
 ## CSS
 ![device reponsive](/assets/images/css.vali.png)
 
-
+---
 ## JS
-![device reponsive](/assets/images/jsvalidator.png)
+![device reponsive](/assets/images/jscheck.png)
 
  ## Lighthouse score
 ![device reponsive](/assets/images/lighthouse.png)
